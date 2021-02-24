@@ -1,23 +1,32 @@
 public class Circle extends Shape implements Resizeable{
+    private double radius = 1.0;
     double a;
     public Circle() {
     }
 
     public Circle(double radius) {
-        this.setRadius(radius);
+        this.radius = radius;
     }
 
     public Circle(double radius, String color, boolean filled) {
         super(color, filled);
-        this.setRadius(radius);
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
     public double getArea() {
-        return getRadius() * getRadius() * Math.PI;
+        return radius * radius * Math.PI;
     }
 
     public double getPerimeter() {
-        return 2 * getRadius() * Math.PI;
+        return 2 * radius * Math.PI;
     }
 
     public void resize(double percent) {
