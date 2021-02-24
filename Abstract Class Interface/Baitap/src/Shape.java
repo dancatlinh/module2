@@ -1,7 +1,6 @@
 public class Shape  {
     private String color = "green";
     private boolean filled = true;
-    private double radius = 1;
 
     public Shape() {
     }
@@ -19,13 +18,6 @@ public class Shape  {
         this.color = color;
     }
 
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
 
     public boolean isFilled() {
         return filled;
